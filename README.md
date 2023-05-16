@@ -1,9 +1,12 @@
 # FusNet
 ## A deep learning method based on model fusion strategy for predicting protein-mediated loops.
 ## Contents
-- Installation
+- [Installation](#Installation)
+- [Model training](#Model_training)
+- Model predicting
 
-## Installation
+
+## <span id="Installation">Installation</span>
 FusNet is built on Python3. tombo is required to re-squiggle the raw signals from nanopore reads before running deepsignal.
 
 - Prerequisites:
@@ -43,7 +46,7 @@ git clone https://github.com/bioinfomaticsCSU/FusNet.git
 cd FusNet
 ```
 
-## Model training
+## <span id="Model_training">Model training</span>
 **1. Data preprocessing**
 ```
 bash preprocess/preprocess_data.sh \
@@ -105,7 +108,7 @@ After the program runs successfully, the following files will be generated
 out_dir/gm12878_rad21_extracted_test_FusNet_probs.txt
 ```
 
-## Model predicting
+## Model predicting{#Model predicting}
 **1. Data preprocessing**
 ```
 python preprocess/generate_loops.py -m 1000 -e 500 \
