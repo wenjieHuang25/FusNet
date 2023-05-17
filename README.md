@@ -56,7 +56,18 @@ data/gm12878_rad21/gm12878_rad21_TF_hg19.narrowPeak gm12878_rad21 out_dir
 ```
 After the program runs successfully, the following files will be generated
 ```
-
+gm12878_rad21_all_intra_negative_loops.bedpe
+gm12878_rad21_exclusive_intra_negative_loops.bedpe
+gm12878_rad21_loops_test.hdf5
+gm12878_rad21_loops_train.hdf5
+gm12878_rad21_loops_valid.hdf5
+gm12878_rad21_no_tf_negative_loops.bedpe
+gm12878_rad21_positive_anchors.bed
+gm12878_rad21_random_pairs_from_dnase.bedpe
+gm12878_rad21_random_pairs_from_tf.bedpe
+gm12878_rad21_random_pairs_from_tf_and_dnase.bedpe
+gm12878_rad21_negative_loops.bedpe
+gm12878_rad21_positive_loops.bedpe
 ```
 
 **2. Training sequence feature extractor**
