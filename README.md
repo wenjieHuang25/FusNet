@@ -68,6 +68,9 @@ gm12878_rad21_random_pairs_from_tf.bedpe
 gm12878_rad21_random_pairs_from_tf_and_dnase.bedpe
 gm12878_rad21_negative_loops.bedpe
 gm12878_rad21_positive_loops.bedpe
+gm12878_rad21_loops_train.hdf5
+gm12878_rad21_loops_test.hdf5
+gm12878_rad21_loops_valid.hdf5
 ```
 
 **2. Training sequence feature extractor**
@@ -77,7 +80,8 @@ gm12878_rad21_extractor out_dir
 ```
 After the program runs successfully, the following files will be generated
 ```
-
+gm12878_rad21_extractor.model.pt
+gm12878_rad21_extractor.classifier.pt
 ```
 
 **3. Feature extracting**
@@ -90,7 +94,7 @@ python fusnet/extract_feature.py \
 ```
 After the program runs successfully, the following files will be generated
 ```
-out_dir/gm12878_rad21_extracted_train_factors_outputs.hdf5   
+out_dir/gm12878_rad21_extracted_train_factor_outputs.hdf5   
 out_dir/gm12878_rad21_extracted_valid_factor_outputs.hdf5
 out_dir/gm12878_rad21_extracted_test_factor_outputs.hdf5
 ```
@@ -101,10 +105,10 @@ python fusnet/train_fusion_model.py out_dir gm12878_rad21
 ```
 After the program runs successfully, the following files will be generated
 ```
-out_dir/gm12878_rad21_knn_predictor.pkl 
-out_dir/gm12878_rad21_lgb_predictor.pkl 
-out_dir/gm12878_rad21_xgb_predictor.pkl
-out_dir/gm12878_rad21_rf_predictor.pkl 
+out_dir/gm12878_rad21_extracted_knn_predictor.pkl 
+out_dir/gm12878_rad21_extracted_lgb_predictor.pkl 
+out_dir/gm12878_rad21_extracted_xgb_predictor.pkl
+out_dir/gm12878_rad21_extracted_rf_predictor.pkl 
 ```
 
 **5. Loops predicting**
@@ -119,7 +123,7 @@ After the program runs successfully, the following files will be generated
 out_dir/gm12878_rad21_extracted_test_FusNet_probs.txt
 ```
 
-## Model predicting{#Model predicting}
+## Model predicting
 **1. Data preprocessing**
 ```
 python preprocess/generate_loops.py -m 1000 -e 500 \
