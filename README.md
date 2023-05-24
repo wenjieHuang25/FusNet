@@ -9,25 +9,25 @@
 ## Installation
 FusNet is built on Python3. tombo is required to re-squiggle the raw signals from nanopore reads before running deepsignal.
 
-- Prerequisites:
+Prerequisites:
 
-Python 3.x
+- Python 3.x
 
-tensorflow
+- tensorflow
 
-- Dependencies:
+Dependencies:
 
-h5py
+- h5py
 
-numpy
+- numpy
 
-pandas
+- pandas
 
-xgboost
+- xgboost
 
-lightgbm
+- lightgbm
 
-scikit-learn
+- scikit-learn
 
 **1. Create an environment**
 ```
