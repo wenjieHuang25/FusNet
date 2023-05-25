@@ -108,7 +108,7 @@ After the program runs successfully, the following files will be generated
 out_dir/gm12878_rad21_extracted_knn_predictor.pkl 
 out_dir/gm12878_rad21_extracted_lgb_predictor.pkl 
 out_dir/gm12878_rad21_extracted_xgb_predictor.pkl
-out_dir/gm12878_rad21_extracted_rf_predictor.pkl 
+out_dir/gm12878_rad21_extracted_lr_predictor.pkl 
 ```
 
 **5. Loops predicting**
@@ -134,10 +134,9 @@ python preprocess/generate_loops.py -m 1000 -e 500 \
 **2. Extracting sequence features**
 ```
 python fusnet/extract_feature.py \
-  out_dir/gm12878_rad21_extractor.model.pt \
-  out_dir/gm12878_rad21_loops_all_predict.hdf5 \
-  gm12878_rad21_extracted_all_predict_ \
-  out_dir;
+  out_dir/gm12878_ctcf_extractor.model.pt \
+  out_dir/gm12878_ctcf_loops_for_prediction_all_predict \
+  gm12878_ctcf_extracted_all_predict out_dir -p True
 ```
 
 **3. Loops predicting**
