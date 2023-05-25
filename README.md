@@ -46,7 +46,7 @@ git clone https://github.com/bioinfomaticsCSU/FusNet.git
 cd FusNet
 ```
 
-**2. Create directory**
+**3. Create directory**
 ```
 mkdir logs
 mkdir out_dir
