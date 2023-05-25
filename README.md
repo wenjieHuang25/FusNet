@@ -46,6 +46,13 @@ git clone https://github.com/bioinfomaticsCSU/FusNet.git
 cd FusNet
 ```
 
+**2. Create directory**
+```
+mkdir logs
+mkdir out_dir
+```
+
+
 ## Model training
 **1. Data preprocessing**
 ```
